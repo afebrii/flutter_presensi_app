@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_presensi_app/core/constants/colors.dart';
-import 'package:flutter_presensi_app/data/datasources/auth_local_datasource.dart';
 import 'package:flutter_presensi_app/data/datasources/auth_remote_datasource.dart';
 import 'package:flutter_presensi_app/presentation/auth/bloc/logout/logout_bloc.dart';
 import 'package:flutter_presensi_app/presentation/auth/pages/splash_page.dart';
+import 'package:flutter_presensi_app/presentation/home/bloc/update_user_register_face/update_user_register_face_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -26,6 +26,10 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => LogoutBloc(AuthRemoteDatasource()),
+        ),
+        BlocProvider(
+          create: (context) =>
+              UpdateUserRegisterFaceBloc(AuthRemoteDatasource()),
         ),
       ],
       child: MaterialApp(

@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'dart:convert';
 
 class AuthResponseModel {
@@ -22,6 +23,16 @@ class AuthResponseModel {
         "user": user?.toMap(),
         "token": token,
     };
+
+  AuthResponseModel copyWith({
+    User? user,
+    String? token,
+  }) {
+    return AuthResponseModel(
+      user: user ?? this.user,
+      token: token ?? this.token,
+    );
+  }
 }
 
 class User {

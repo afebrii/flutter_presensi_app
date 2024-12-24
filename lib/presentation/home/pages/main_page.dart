@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_presensi_app/presentation/home/pages/home_page.dart';
 import 'package:flutter_presensi_app/presentation/home/pages/setting_page.dart';
 import '../../../core/core.dart';
 
@@ -13,7 +14,7 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
   final _widgets = [
     // const HomePage(),
-    const Center(child: Text('This is home page')),
+    const HomePage(),
     const Center(child: Text('This is history page')),
     const SettingPage(),
     const Center(child: Text('This is profile page')),
