@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "97801914591",
+    "project_id": "presensi-app-75d87",
+    "storage_bucket": "presensi-app-75d87.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:97801914591:android:f31b6d595f23eef6ec016a",
+        "android_client_info": {
+          "package_name": "com.afebrii.flutter_presensi_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyQ0zWYqw3KFmX0JSFrxEXhipby-fDIyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

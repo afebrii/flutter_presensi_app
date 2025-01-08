@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:camera/camera.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_presensi_app/core/constants/variables.dart';
 import 'package:flutter_presensi_app/data/datasources/auth_local_datasource.dart';

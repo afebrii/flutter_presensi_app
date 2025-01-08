@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../core.dart';
+import 'spaces.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -12,18 +12,21 @@ class CustomTextField extends StatelessWidget {
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final bool readOnly;
+  final int maxLines;
 
-  const CustomTextField(
-      {super.key,
-      required this.controller,
-      required this.label,
-      this.onChanged,
-      this.obscureText = false,
-      this.keyboardType,
-      this.showLabel = true,
-      this.prefixIcon,
-      this.suffixIcon,
-      this.readOnly = false});
+  const CustomTextField({
+    super.key,
+    required this.controller,
+    required this.label,
+    this.onChanged,
+    this.obscureText = false,
+    this.keyboardType,
+    this.showLabel = true,
+    this.prefixIcon,
+    this.suffixIcon,
+    this.readOnly = false,
+    this.maxLines = 1,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +49,7 @@ class CustomTextField extends StatelessWidget {
           obscureText: obscureText,
           keyboardType: keyboardType,
           readOnly: readOnly,
+          maxLines: maxLines,
           decoration: InputDecoration(
             prefixIcon: prefixIcon,
             suffixIcon: suffixIcon,

@@ -18,28 +18,31 @@ class MenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: AppColors.stroke),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SvgPicture.asset(
-            iconPath,
-            width: 40,
-            height: 40,
-          ),
-          const SpaceHeight(4),
-          Text(
-            label,
-            style: const TextStyle(
-              fontSize: 12,
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(color: AppColors.stroke),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgPicture.asset(
+              iconPath,
+              width: 40,
+              height: 40,
             ),
-          )
-        ],
+            const SpaceHeight(4),
+            Text(
+              label,
+              style: const TextStyle(
+                fontSize: 12,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
